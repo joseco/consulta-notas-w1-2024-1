@@ -1,13 +1,12 @@
 const express = require('express');
-var cors = require('cors');
+const path = require('path');
 
 const app = express();
 const PORT = 80;
 
 // Middleware
-app.use(cors());
 app.use(express.json());
-app.use(express.static('public'));
+app.use(express.static(path.join(__dirname, 'public')));
 
 // Simula una base de datos con un arreglo
 const data = {
