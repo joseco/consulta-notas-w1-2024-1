@@ -59,6 +59,12 @@ app.get('/api/nota/:code', (req, res) => {
   }
 });
 
+// Endpoint para buscar información por código
+app.get('/api/hello', (req, res) => {
+  
+    res.json('Hello World!');
+});
+
 // Inicia el servidor
 app.listen(PORT, () => {
   console.log(`Servidor corriendo en http://localhost:${PORT}`);
