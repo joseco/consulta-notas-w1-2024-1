@@ -48,6 +48,8 @@ const data = {
 // Endpoint para buscar información por código
 app.get('/api/nota/:code', (req, res) => {
   const { code } = req.params;
+   console.log(code);
+   console.table(data);
   const result = data[code];
 
   if (result) {
